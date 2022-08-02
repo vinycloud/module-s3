@@ -8,7 +8,7 @@ module "s3" {
   #tags = var.tags
   default_tags = {
 
-    bu       = "bu-test"
+    bu       = "test"
     team     = "dev"
     vertical = "vertical-test"
 
