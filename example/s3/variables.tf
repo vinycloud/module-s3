@@ -3,7 +3,7 @@ variable "environment_name" {
   description = "Required: Name of environment"
 }
 
-variable "tags" {
+/*variable "tags" {
   description = "Tags of S3 Bucket"
   type        = map(any)
-}
+}*/

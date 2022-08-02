@@ -1,6 +1,3 @@
-#tfsec:ignore:aws-s3-enable-versioning
-#tfsec:ignore:aws-s3-enable-bucket-logging
-#tfsec:ignore:aws-s3-enable-bucket-encryption
 resource "aws_s3_bucket" "s3_bucket" {
   bucket = var.bucket_name
   tags   = merge(var.tags, var.default_tags, var.s3_tags)
