@@ -41,6 +41,12 @@ variable "sse_encrypt" {
   default     = "AES256"
 }
 
+variable "s3_ownership" {
+  description = "Enforced Ownership to S3, Default is BucketOwnerEnforced`"
+  type        = string
+  default     = "BucketOwnerEnforced"
+}
+
 ## Block Access Variables ##
 variable "block_public_acls" {
   description = "Block ACLS on Bucket"
