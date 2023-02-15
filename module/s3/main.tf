@@ -19,6 +19,14 @@ resource "aws_s3_bucket_versioning" "s3_versioning" {
   }
 }
 
+esource "aws_s3_bucket_ownership_controls" "s3_ownership" {
+  bucket = aws_s3_bucket.s3_bucket.id
+
+  rule {
+    object_ownership = var.s3_ownership
+  }
+}
+
 resource "aws_s3_bucket_public_access_block" "s3_block_access" {
   bucket = aws_s3_bucket.s3_bucket.id
 
