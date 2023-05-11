@@ -1,17 +1,16 @@
 module "s3" {
-  source = "../../../../modules/v2.3.4/modules//s3"
+  source = "../../module/s3"
 
   ## Local Variable ##
-  bucket_name = "<bucket_name>-${var.environment_name}"
+  bucket_name = "brunolabs-module-s3-${var.environment_name}"
 
   ## Tags##
-  tags = var.tags
+  #tags = var.tags
   default_tags = {
 
-    bu       = ""
-    team     = ""
-    vertical = ""
+    bu       = "test"
+    team     = "dev"
+    vertical = "vertical-test"
 
   }
-
 }
